@@ -1,50 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MITRA DESA</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <!-- Navbar Start -->
-    <header>
-      <div class="container">
-        <div class="logo">
-          <h1>MITRA<span>DESA</span></h1>
-          <h2>Selarai City</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form" id="loginform">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <div class="input-box-login">
+                    <input type="text" name="Nik_dan_Nama" required>
+                    <label>Nik atau nama</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box-login">
+                    <input type="password" name="Password" class="password" required>
+                    <label>Password</label>
+                    <div class="box-eye" onclick="showhide()">
+                        <i class='bx bx-show' id="show"></i>
+                        <i class='bx bx-hide' id="hide"></i>
+                    </div>
+                </div>
+                <div class="lupa-password"><a href="#">Lupa Password</a>
+                </div>
+                <button type="submit" class="tombol">login</button>
+                <div class="register-link">
+                    <p>Tidak punya akun? <a href="#" id="register-btn" onclick="regis()">Register</a></p>
+                </div>
+            </form>
         </div>
-        <nav>
-          <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="#">Informasi</a></li>
-            <li class="dropdown">
-              <a href="#">Layanan</a>
-              <div class="dropdown-content">
-                <a href="#">Info Permohonan</a>
-                <a href="#">Surat Pengantar</a>
-              </div>
-            </li>
-            <li><a href="#">Informasi</a></li>
-            <li><a href="#">Profil Desa</a></li>
-            <li><a href="#">Produk Hukum</a></li>
-            <li class="nav-special"><a href="#">Login Penduduk</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- Navbar End -->
 
-    <!-- Isi 1 Start -->
-    <div class="Isi">
-      <p>WEBSITE</p>
-      <h1>PELAYANAN<br /><span>DESA</span></h1>
-      <br>
-      <h2>Selamat datang di Website Pelayanan Desa Contoh</br>silahkan cari keperluan
-        anda dalam website ini.</br>Jangan lupa untuk terus mendukung kami
-      </h2>
-      <button>Tentang Kami</button>
+        <div class="register-form" id="regiterform">
+            <h2>Registrasi</h2>
+            <form action="register.php" method="post">
+                <div class="input-box-register">
+                        <input type="text" required name="NIk">
+                        <label>Masukan Nik</label>
+                        <i class='bx bxs-id-card'></i>
+                    </div>
+                    <div class="input-box-register">
+                        <input type="text" required name="Nama">
+                        <label>Masukan Nama</label>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box-register">
+                        <input type="tel" required name="Telpon">
+                        <label>No Telpon</label>
+                        <i class='bx bxs-phone'></i>
+                    </div>
+                    <div class="input-box-register">
+                        <input type="text" required name="Password">
+                        <label>Buat password</label>
+                        <i class='bx bxs-lock-alt'></i>
+                    </div>
+                    <button type="submit" class="tombol">register</button>
+                    <div class="register-link">
+                        <p>sudah punya akun? <a href="#" id="login-btn" onclick="login()">login sini</a></p>
+                    </div>
+                </form>
+            </div>
     </div>
-    <!-- Isi 1 End -->
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
